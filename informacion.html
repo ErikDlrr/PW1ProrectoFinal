@@ -1,19 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="Erik Dlr" content="Proyecto final">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/favico.ico">
-        <script src="script.js"></script>
-        <title>Informacion</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="Erik Dlr" content="Proyecto final">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/favico.ico">
+    <script src="script.js"></script>
+    <title>Informacion</title>
+</head>
+
 <body>
+    <div class="head">
+
+        <div class="logo">
+            <a href="https://www.upslp.edu.mx"><img
+                    src="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/icemaglogo.png"
+                    alt="UPSLP"></a>
+        </div>
+
+        <div class="menu-icon" onclick="toggleNavbar()">
+            <img src="img/menu.png" alt="Icono de menú" style="width: 30px;">
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="informacion.html">Informacion</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="situacionActual.html">Situacion actual</a>
+            <a href="vision.html">Vision a futuro</a>
+            <a href="videos.html">Videos</a>
+            <a href="interaccion.html">Interacion</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="ayuda.html">Ayuda</a>
+        </nav>
+    </div>
+    <div class="info" id="queEs">
+        <h2>¿Qué es la computación cuántica?</h2>
+        <p>Quantum computing es una tecnología que aprovecha las leyes de la mecánica cuántica para resolver problemas
+            demasiado complejos que no pueden ser resueltos por las computadoras tradicionales.&nbsp;</p>
+        <p>Hoy, IBM Quantum hace que el hardware cuántico real, una herramienta que los científicos comenzaron a
+            imaginar hace solo tres décadas, esté disponible para miles de desarrolladores. Nuestros ingenieros ofrecen
+            procesadores cuánticos superconductores cada vez más potentes en intervalos regulares, lo que permite
+            avanzar para obtener la velocidad y la capacidad informática cuántica necesarias para cambiar el
+            mundo.&nbsp;</p>
+        <p>Estas máquinas son muy diferentes a las computadoras tradicionales que existen desde hace más de medio siglo.
+            A continuación, se presenta una introducción a esta tecnología transformadora.</p>
+    </div>
+
+    <div class="info" id="porQue">
+        <h2>¿Por qué la computación cuántica?</h2>
+        <p>Para algunos problemas, las supercomputadoras no son tan súper.</p>
+        <p>Cuando los científicos e ingenieros se enfrentan a problemas difíciles, recurren a las supercomputadoras.
+            Estas son computadoras tradicionales muy grandes, a menudo con miles de núcleos de CPU y GPU clásicos. Sin
+            embargo, incluso las supercomputadoras luchan por resolver ciertos tipos de problemas.<br>
+            <br>
+            Si una supercomputadora se paraliza, probablemente se deba a que se le pidió a la gran máquina tradicional
+            que resolviera un problema con un alto grado de complejidad. Cuando las computadoras tradicionales fallan, a
+            menudo se debe a la complejidad.
+        </p>
+        <p>Los problemas complejos son problemas con muchas variables que interactúan de manera complicada. Modelar el
+            comportamiento de átomos individuales en una molécula es un problema complejo, debido a que todos los
+            electrones diferentes interactúan entre sí. Determinar las rutas ideales para cientos de petroleros en una
+            red de envío global también es complejo. &nbsp;</p>
+    </div>
+
+
+    <div class="info" id="rapido">
+        <h2>¿Por qué las computadoras cuánticas son más rápidas?</h2>
+        <p>A continuación se presenta un ejemplo que muestra cómo las computadoras cuánticas pueden tener éxito donde
+            las computadoras tradicionales fallan:&nbsp;</p>
+        <p>Una supercomputadora podría ser excelente realizando tareas difíciles como revisar una gran base de datos de
+            secuencias de proteínas. Pero tendrá dificultades para ver los patrones sutiles en esos datos que determinan
+            cómo se comportan esas proteínas.</p>
+        <p><strong>Cómo la complejidad paraliza a las supercomputadoras</strong><br>
+        </p>
+        <p>Las proteínas son cadenas largas de aminoácidos que se convierten en máquinas biológicas útiles cuando se
+            pliegan en formas complejas. Averiguar cómo se plegarán las proteínas es un problema con implicaciones
+            importantes para la biología y la medicina.</p>
+        <p>Una supercomputadora tradicional podría intentar plegar una proteína con fuerza bruta, aprovechando sus
+            muchos procesadores para verificar todas las formas posibles de doblar la cadena química antes de llegar a
+            una respuesta. Pero a medida que las secuencias de proteínas se hacen más largas y complejas, la
+            supercomputadora se paraliza. </p>
+        <p>En teoría, una cadena de 100 aminoácidos podría plegarse en billones de formas. Ninguna computadora tiene la
+            memoria suficiente para manejar todas las combinaciones posibles de pliegues individuales.</p>
+        <p><strong>Las computadoras cuánticas están diseñadas para la complejidad</strong></p>
+        <p>Los algoritmos cuánticos adoptan un nuevo enfoque para este tipo de problemas complejos: crean espacios
+            multidimensionales donde emergen los patrones que vinculan los puntos de datos individuales.</p>
+        <p>En el caso de un problema de plegamiento de proteínas, ese patrón podría ser la combinación de pliegues que
+            requieren la menor cantidad de energía para producirse. Esa combinación de pliegues es la solución al
+            problema.</p>
+        <p>Las computadoras tradicionales no pueden crear estos espacios computacionales, por lo que no pueden encontrar
+            estos patrones. En el caso de las proteínas, ya existen algoritmos cuánticos tempranos que pueden encontrar
+            patrones de plegamiento en formas completamente nuevas y más eficientes, sin los laboriosos procedimientos
+            de verificación de las computadoras tradicionales. </p>
+        <p>A medida que el hardware cuántico escala y estos algoritmos avanzan, podrían abordar problemas de plegamiento
+            de proteínas demasiado complejos para cualquier supercomputadora.<br>
+        </p>
+
+    </div>
+
+    <div class="info" id="como">
+
+        <h2>¿Cómo funcionan las computadoras cuánticas?</h2>
+        <ul>
+            <li>Las computadoras cuánticas son máquinas elegantes, más pequeñas y que requieren menos energía que las
+                supercomputadoras.</li>
+            <li>Un procesador IBM Quantum es una oblea no más grande que la que se puede encontrar en una computadora
+                portátil.</li>
+            <li>Un sistema de hardware cuántico tiene aproximadamente el tamaño de un automóvil, compuesto
+                principalmente por sistemas de enfriamiento para mantener el procesador superconductor a una temperatura
+                operativa ultrafría.</li>
+        </ul>
+        <p>Un procesador clásico utiliza bits para realizar sus operaciones. Una computadora cuántica usa qubits para
+            ejecutar algoritmos cuánticos multidimensionales.</p>
+        <p><strong>Superfluidos</strong><br>
+            Es probable que su computadora desktop use un ventilador para enfriarse lo suficiente para trabajar.
+            Nuestros procesadores cuánticos deben estar muy fríos, alrededor de una centésima de grado sobre cero. Para
+            lograr esto, usamos superfluidos superenfriados para crear superconductores.</p>
+        <p><strong>Superconductores</strong><br>
+            A esas temperaturas ultrabajas, ciertos materiales en nuestros procesadores exhiben otro efecto mecánico
+            cuántico importante: los electrones se mueven a través de ellos sin resistencia. Esto los convierte en
+            "superconductores". </p>
+        <p>Cuando los electrones pasan a través de los superconductores, se emparejan y forman "pares de Cooper". Estos
+            pares pueden transportar una carga por barreras o aisladores a través de un proceso conocido como efecto
+            túnel. Dos superconductores colocados a ambos lados de un aislador forman una unión de Josephson.</p>
+        <p><strong>Control</strong><br>
+            Nuestras computadoras cuánticas usan uniones de Josephson como qubits superconductores. Al disparar fotones
+            de microondas a estos qubits, se puede controlar su comportamiento y hacer que retengan, cambien y lean
+            unidades individuales de información cuántica.</p>
+        <p><strong>Superposición</strong><br>
+            Un qubit en sí mismo no es muy útil, pero puede realizar un truco importante: colocar la información
+            cuántica que contiene en un estado de superposición, lo que representa una combinación de todas las
+            configuraciones posibles del qubit. Los grupos de qubits en superposición pueden crear espacios
+            computacionales complejos y multidimensionales. Los problemas complejos se pueden representar de nuevas
+            formas en estos espacios.</p>
+        <p><strong>Entrelazamiento</strong><br>
+            El entrelazamiento es un efecto mecánico cuántico que correlaciona el comportamiento de dos cosas separadas.
+            Cuando dos qubits están entrelazados, los cambios en un qubit impactan directamente en el otro. Los
+            algoritmos cuánticos aprovechan esas relaciones para encontrar soluciones a problemas complejos.<br>
+        </p>
+        <p>&nbsp;</p>
+    </div>
     
     <footer>
         <h4> Pagina web desarrollada por el alumno 177700 para la materia de CNT de la UPSLP. Derechos reservados.
             &copy; 2024.</h4>
     </footer>
 </body>
+
 </html>
