@@ -192,6 +192,16 @@ p{
     font-size: 16px;
 }
 
+.citation{
+    text-align: justify;
+    text-align: left;
+    color: rgb(175, 175, 175);
+    padding: 8%;
+    font-style: italic;
+    font-size: 12px;
+    margin: auto 150px;
+}
+
 h2{
     color: #fff;
     font-size: 30px;
