@@ -186,8 +186,8 @@ p{
     text-align: justify;
     align-items: center;
     color: rgb(175, 175, 175);
-    padding: 8%;
-    margin: auto 150px;
+    padding: 7%;
+    margin: auto 8%;
     font-family: 'Popins', sans-serif; 
     font-size: 16px;
 }
@@ -198,7 +198,7 @@ p{
     color: rgb(175, 175, 175);
     padding: 8%;
     font-style: italic;
-    font-size: 12px;
+    font-size: 8px;
     margin: auto 150px;
 }
 
