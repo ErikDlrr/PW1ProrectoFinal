@@ -372,3 +372,76 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+/*______________________________________________________________________________________*/
+.foto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto crea una cuadrícula con 3 columnas de igual tamaño */
+    grid-gap: 6px; /* Esto añade un espacio de 10px entre los vídeos */
+    margin: auto 16%;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto crea una cuadrícula con 3 columnas de igual tamaño */
+    grid-gap: 6px; /* Esto añade un espacio de 10px entre los vídeos */
+    margin: auto 16%;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-container {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.foto-video {
+    width: 100%;
+    height: 100%;
+}
+
+.video-container:hover .foto-video {
+    transform: scale(1.1); 
+}
+
+.video-container p {
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

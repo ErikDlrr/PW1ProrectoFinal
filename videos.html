@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="Erik Dlr" content="Proyecto final">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/favico.ico">
-        <script src="script.js"></script>
-        <title>Videos</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="Erik Dlr" content="Proyecto final">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/favico.ico">
+    <script src="script.js"></script>
+    <title>Videos</title>
+</head>
+
 <body>
     <div class="head">
 
         <div class="logo">
-            <a href="https://www.upslp.edu.mx"><img src="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/icemaglogo.png"
-                alt="UPSLP"></a>
+            <a href="https://www.upslp.edu.mx"><img
+                    src="https://www.upslp.edu.mx/upslp/wp-content/themes/icemagtheme/images/demo/icemaglogo.png"
+                    alt="UPSLP"></a>
         </div>
 
         <div class="menu-icon" onclick="toggleNavbar()">
             <img src="img/menu.png" alt="Icono de menú" style="width: 30px;">
-        </div> 
+        </div>
 
         <nav class="navbar">
             <a href="index.html">Inicio</a>
@@ -33,12 +37,57 @@
             <a href="ayuda.html">Ayuda</a>
         </nav>
     </div>
-    
-    <!-- Aqui va el contenido de la pagina -->
-    
+    <br><br><br><br><br><br><br>
+    <h2>Videos</h2><br>
+    <div class="foto">
+        <div class="video-container">
+            <video src="vid/CÓMO EL COMPUTADOR CUÁNTICO PUEDE CAMBIAR EL MUNDO... Y ROMPER LA RED ¿Qué está pasando_.mp4" class="foto-video"></video>
+            <p>CÓMO EL COMPUTADOR CUÁNTICO PUEDE CAMBIAR EL MUNDO... Y ROMPER LA RED ¿Qué está pasando?</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/Cómo el cómputo cuántico rompe el internet, desde ahora..mp4" class="foto-video"></video>
+            <p>Cómo el cómputo cuántico rompe el internet, desde ahora.</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/Cómo se Fabrica un Bit Cuántico _ Átomos Artificiales.mp4" class="foto-video"></video>
+            <p>Cómo se Fabrica un Bit Cuántico Átomos Artificiales</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/Cómo se programa un ORDENADOR CUÁNTICO (bien explicado).mp4" class="foto-video"></video>
+            <p>Cómo se programa un ORDENADOR CUÁNTICO (bien explicado)</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/Esta es la computadora cuántica más poderosa del mundo.mp4" class="foto-video"></video>
+            <p>Esta es la computadora cuántica más poderosa del mundo</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/Probamos un ORDENADOR CUÁNTICO.mp4" class="foto-video"></video>
+            <p>Probamos un ORDENADOR CUÁNTICO</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/¡Me invitan al COMPUTADOR CUÁNTICO de los LABORATORIOS de IBM!.mp4" class="foto-video"></video>
+            <p>¡Me invitan al COMPUTADOR CUÁNTICO de los LABORATORIOS de IBM!</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/¿Qué es la computación cuántica y por qué cambiará el mundo_.mp4" class="foto-video"></video>
+            <p>¿Qué es la computación cuántica y por qué cambiará el mundo?</p>
+        </div>
+        <div class="video-container">
+            <video src="vid/¿Qué es y cómo funciona la COMPUTACIÓN CUÁNTICA_.mp4" class="foto-video"></video>
+            <p>¿Qué es y cómo funciona la COMPUTACIÓN CUÁNTICA?</p>
+        </div>
+    </div>
+
+
+    <div class="modal">
+        <span class="close">&times;</span>
+        <video class="modal-content" id="expanded-video" controls></video>
+    </div>
+
     <footer>
         <h4> Pagina web desarrollada por el alumno 177700 para la materia de CNT de la UPSLP. Derechos reservados.
             &copy; 2024.</h4>
     </footer>
 </body>
+
 </html>
