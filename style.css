@@ -386,7 +386,7 @@ footer {
 .foto {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Esto crea una cuadrícula con 3 columnas de igual tamaño */
-    grid-gap: 6px; /* Esto añade un espacio de 10px entre los vídeos */
+    grid-gap: 10px; /* Esto añade un espacio de 10px entre los vídeos */
     margin: auto 16%;
     justify-content: center;
     transition: transform 0.3s ease-in-out;
@@ -395,9 +395,10 @@ footer {
 .video-container {
     position: relative;
     width: 300px;
-    height: 180px;
+    height: 195px;
     overflow: hidden;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(7, 0, 215, 0.337);
 }
 
 .foto-video {
@@ -411,8 +412,9 @@ footer {
 
 .video-container p {
     text-align: center;
-    color: #333;
-    font-size: 16px;
+    color: #eaeaea;
+    font-size: 13px;
+    font-family: 'Popins', sans-serif;
 }
 
 .modal {

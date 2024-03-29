@@ -3,6 +3,9 @@ function toggleNavbar() {
     navbar.classList.toggle('expanded');
 }
 
+//////////////////////////////////////////////////////////////////////////////////////
+//Foto
+
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.querySelector('.modal');
     const modalImg = document.getElementById('expanded-img');
@@ -27,54 +30,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.querySelector('.modal');
-    const modalVideo = document.getElementById('expanded-video');
-    const galleryVideos = document.querySelectorAll('.foto-video');
-    const closeBtn = document.querySelector('.close');
+///////////////////////////////////////////////////////////////////////////////////////////
+//Video
 
-    galleryVideos.forEach(function (video) {
-        video.addEventListener('click', function () {
-            modal.style.display = 'block';
-            modalVideo.src = this.src;
-            modalVideo.play();
-        });
-    });
+// Carga la API de YouTube de manera asíncrona
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    closeBtn.addEventListener('click', function () {
-        modal.style.display = 'none';
-        modalVideo.pause();
-    });
-
-    window.addEventListener('click', function (e) {
-        if (e.target == modal) {
-            modal.style.display = 'none';
-            modalVideo.pause();
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Selecciona todos los videos
-    var videos = document.querySelectorAll('.foto-video');
-
-    videos.forEach(function(video) {
-        video.addEventListener('mouseenter', function(event) {
-            // Reproduce el video sin audio
-            event.target.muted = true;
-            event.target.play();
-
-            // Detiene el video después de 10 segundos
-            setTimeout(function() {
-                event.target.pause();
-                event.target.currentTime = 0;
-            }, 10000);
+// Crea un reproductor de YouTube para cada div con la clase foto-video
+var players = {};
+function onYouTubeIframeAPIReady() {
+    var youtubeVideos = document.querySelectorAll('.youtube-video');
+    for (var i = 0; i < youtubeVideos.length; i++) {
+        var videoId = youtubeVideos[i].dataset.videoId;
+        players[videoId] = new YT.Player(youtubeVideos[i], {
+            height: 'auto',
+            width: 'auto',
+            videoId: videoId,
+            events: {
+                'onStateChange': function(event) {
+                    // Detiene el video cuando el cursor deja de estar sobre él
+                    if (event.data == YT.PlayerState.PAUSED) {
+                        event.target.seekTo(0);
+                    }
+                }
+            }
         });
 
-        video.addEventListener('mouseleave', function(event) {
-            // Detiene el video cuando el cursor deja de estar sobre él
-            event.target.pause();
-            event.target.currentTime = 0;
+        // Reproduce el video sin audio cuando el cursor está sobre él
+        youtubeVideos[i].addEventListener('mouseenter', function(event) {
+            var videoId = event.currentTarget.dataset.videoId;
+            players[videoId].mute();
+            players[videoId].playVideo();
         });
-    });
-});
+
+        // Detiene el video cuando el cursor deja de estar sobre él
+        youtubeVideos[i].addEventListener('mouseleave', function(event) {
+            players[videoId].pauseVideo();
+            players[videoId].seekTo(0);
+        });
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////
+
