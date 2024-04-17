@@ -1,0 +1,28 @@
+#a{
+	background-color:  #000000;
+}
+
+#contenedor{
+	
+	margin-left: 50px;
+
+}
+#cont{
+	
+	margin-left: 50px;
+	
+}
+input{
+	width:90%;
+height: 30px;
+}
+#gr{
+	background-color: mediumblue;
+	color: white;
+}
+h1{
+	color: white;
+}
+label{
+	color: white;
+}
