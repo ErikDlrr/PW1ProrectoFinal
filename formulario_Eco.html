@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <form action="enviar_formulario.php" method="post">
+  <title>Formulario Ecológico</title>
+  <link rel="stylesheet" href="eco.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Formulario Digital: Solución Ecológica para No Impresión de Papel</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion">
+      </div>
+      <div class="form-group">
+        <p>¿Cuál es su preferencia?</p>
+        <label><input type="radio" name="preferencia" value="electronico"> Prefiero recibir comunicaciones electrónicas en lugar de documentos impresos.</label><br>
+        <label><input type="radio" name="preferencia" value="impreso"> Prefiero documentos impresos, pero estoy dispuesto/a a cambiar a opciones electrónicas si es posible.</label><br>
+        <label><input type="radio" name="preferencia" value="ninguna"> No tengo preferencia.</label>
+      </div>
+      <div class="form-group">
+        <label for="motivo">Motivo:</label>
+        <textarea id="motivo" name="motivo" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="sugerencias">Sugerencias:</label>
+        <textarea id="sugerencias" name="sugerencias" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label><input type="checkbox" required> Al enviar este formulario, reconozco mi compromiso con la preservación del medio ambiente y la reducción del uso de papel cuando sea posible.</label>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
