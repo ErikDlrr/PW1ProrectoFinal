@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estiloCues.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>    
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+        //Evalua cada pregunta
+        for (var x=1;x<=4;x++)
+        {
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+            document.getElementById("comentario").innerHTML="Sabes mucho!!";
+        else
+            if(total==15)
+            document.getElementById("comentario").innerHTML="Regular!!";
+        else
+            if(total<=10)
+            document.getElementById("comentario").innerHTML="lee la página!!";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 2 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+    <h1>Responde el cuestionario</h1>
+    <h2>¿Qué tanto sabes sobre la computación cuantica?</h2>
+<div>
+    <form>
+    <ul>
+
+        <li>1.¿Qué son las computadoras cuanticas?</li>
+        <input type="radio" name="r1" id="r1" value="0"/>Las computadoras cuánticas son dispositivos mágicos que pueden predecir el futuro de tus series favoritas antes de que se estrenen.<br/><br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Las computadoras cuánticas tienen el potencial de revolucionar campos como la criptografía, la simulación de sistemas cuánticos y la optimización de algoritmos, abriendo nuevas posibilidades en investigación científica y desarrollo tecnológico.<br/><br/>
+        <input type="radio" name="r1" id="r1" value="5"/>Las computadoras cuánticas son un tipo de computadora que utilizan la mecánica cuántica para realizar operaciones en datos.<br/><br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Las computadoras cuánticas tienen el potencial de revolucionar campos como la criptografía, la simulación de sistemas cuánticos y la optimización de algoritmos, abriendo nuevas posibilidades en investigación científica y desarrollo tecnológico.<br/><br/>
+        
+        <li>2.¿Como ha sido el Impacto de la computación cuantica en el sector de Privacidad y Seguridad?</li>
+        <input type="radio" name="r2" id="r2" value="0"/>a computación cuántica ha generado una paradoja en la privacidad y la seguridad al hacer que todos los datos sean simultáneamente seguros y vulnerables.<br/><br/>
+        <input type="radio" name="r2" id="r2" value="0"/>La computación cuántica ha hecho que la privacidad y la seguridad sean cosas del pasado al permitir que cualquier persona acceda a cualquier dato en cualquier momento. <br/><br/>
+        <input type="radio" name="r2" id="r2" value="5"/>Los ordenadores cuánticos podrán descifrar los algoritmos criptográficos actuales porque son capaces de factorizar a una velocidad exponencialmente mayor que los ordenadores actuales.<br/><br/>
+        <input type="radio" name="r2" id="r2" value="0"/>La computación cuántica ha llevado la privacidad y la seguridad al extremo al convertir todos los datos en gatos de Schrödinger digitales: simultáneamente seguros y comprometidos hasta que se mire en la caja del algoritmo.<br/><br/>
+
+        <li>3.¿Cómo dijo Gavin Towler que es aplicada la computación cuantica en la Química?</li>
+        <input type="radio" name="r3" id="r3" value="5"/>"La computación cuántica es particularmente adecuada para el modelado molecular, ya que tiene características únicas que pueden abordar los desafíos probabilísticos de la mecánica cuántica"<br/><br/>
+        <input type="radio" name="r3" id="r3" value="0"/>"La computación cuántica se utiliza para hacer magia en el mundo molecular, transformando átomos y moléculas con un toque de varita cuántica. Es como un espectáculo de magia molecular, pero con menos conejos y más qubits."<br/><br/>
+        <input type="radio" name="r3" id="r3" value="0"/>"La computación cuántica se utiliza para jugar a las adivinanzas moleculares, donde los científicos lanzan dados cuánticos para predecir las estructuras de las moléculas. A veces funciona, ¡pero otras veces obtienen resultados muy extraños!"<br/><br/>
+        <input type="radio" name="r3" id="r3" value="0"/>"La computación cuántica se utiliza para hacer magia en el mundo molecular, transformando átomos y moléculas con un toque de varita cuántica. Es como un espectáculo de magia molecular, pero con menos conejos y más qubits."<br/><br/>
+
+        <li>4.¿A qué nos ayudaría la computación cuantica en el área de "Atención médica y productos farmacéuticos"?</li>
+        <input type="radio" name="r4" id="r4" value="0"/>A revolucionar la atención médica y los productos farmacéuticos convirtiendo los laboratorios en sets de películas de ciencia ficción, donde los científicos manipulan moléculas con gestos de la mano y comandos de voz.<br/><br/>
+        <input type="radio" name="r4" id="r4" value="0"/>A cambiar la forma en que vemos la atención médica y los productos farmacéuticos, convirtiendo las pastillas en diminutos robots inteligentes que no solo curan enfermedades, ¡sino que también pueden hacer malabares!<br/><br/>
+        <input type="radio" name="r4" id="r4" value="0"/>A ayudar en el campo de la atención médica y los productos farmacéuticos convirtiendo las píldoras en mini-dispositivos de teletransporte que llevan medicamentos directamente a las células necesitadas. ¡Adiós a las inyecciones!<br/><br/>
+        <input type="radio" name="r4" id="r4" value="5"/>A acelerar significativamente los plazos y mejorar la calidad de las diversas etapas de los procesos de investigación y desarrollo farmacéuticos<br/><br/>
+
+    </ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
