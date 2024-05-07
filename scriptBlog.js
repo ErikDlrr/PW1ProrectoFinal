@@ -52,12 +52,10 @@ document.getElementById('commentForm').addEventListener('submit', function(event
 });
 
 function saveComment(comment) {
-    // Simular envío de comentario al servidor (aquí deberías enviar los datos al servidor en una aplicación real)
     var comments = JSON.parse(localStorage.getItem('comments')) || [];
     comments.push(comment);
     localStorage.setItem('comments', JSON.stringify(comments));
 
-    // Actualizar la lista de comentarios
     loadComments();
 }
 
