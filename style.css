@@ -517,3 +517,58 @@ footer {
     border-radius: 4px;
     padding: 10px;
 }
+
+/*______________________________________________________________________________________*/
+
+#comments {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#comments div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#commentForm {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#commentForm input,
+#commentForm textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#commentForm button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#commentForm button:hover {
+    background-color: #0056b3;
+}
+
+#TitleB {
+    text-align: center;
+    padding: 20px;
+    background-color: #282828;
+    color: #fff;
+    font-size: 2em;
+    border-bottom: 5px solid #373737;
+}
