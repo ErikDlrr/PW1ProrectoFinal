@@ -1,0 +1,50 @@
+  body {
+            font-family: Times New Roman,serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #eaeaea;
+        }
+        header {
+            background-color:  #000000;
+            color: #eaeaea;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #252525;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-media-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .social-media-list li {
+            margin-bottom: 10px;
+        }
+        .social-media-list li a {
+            display: inline-block;
+            color: #eaeaea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-left: 35%;
+         
+        }
+    #tw{
+            background-color:  #1877F2; 
+        }
+           #ig{
+            background-color: #E4405F; 
+        }
+            #yt{
+            background-color:#CD201F; 
+        }
