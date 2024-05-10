@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <form action="enviar_formulario.php" method="post">
   <title>Formulario Ecológico</title>
-  <link rel="stylesheet" href="eco.css">
+  <link rel="stylesheet" href="eco.css"/>
 </head>
 <body>
   <div class="container">
     <h2>Formulario Digital: Solución Ecológica para No Impresión de Papel</h2>
-    <form action="#" method="post">
+    <form action="formulario.php" method="post">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -27,7 +26,7 @@
         <label for="direccion">Dirección:</label>
         <input type="text" id="direccion" name="direccion">
       </div>
-      <div class="form-group">
+      <div class="form-group" id="preferencia">
         <p>¿Cuál es su preferencia?</p>
         <label><input type="radio" name="preferencia" value="electronico"> Prefiero recibir comunicaciones electrónicas en lugar de documentos impresos.</label><br>
         <label><input type="radio" name="preferencia" value="impreso"> Prefiero documentos impresos, pero estoy dispuesto/a a cambiar a opciones electrónicas si es posible.</label><br>
@@ -44,7 +43,7 @@
       <div class="form-group">
         <label><input type="checkbox" required> Al enviar este formulario, reconozco mi compromiso con la preservación del medio ambiente y la reducción del uso de papel cuando sea posible.</label>
       </div>
-      <button type="submit">Enviar</button>
+      <button type="submit" id="submit" name="submit">Enviar</button>
     </form>
   </div>
 </body>
