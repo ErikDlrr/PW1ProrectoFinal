@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['envi']))
+if(isset($_POST['submit']))
 {
     $para = "danboy.hguevara@gmail.com";
     $asunto = "Enviando informacion";
