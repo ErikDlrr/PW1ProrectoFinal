@@ -109,7 +109,7 @@
         }
 
 
-       function generar() {
+  function generar() {
     // Crear un objeto o instancia jsPDF
     var doc = new jsPDF();
 
@@ -123,37 +123,37 @@
     doc.setFontSize(16);
     doc.text(50, 35, "Resultados del test");
 
-    // Recorrer las respuestas para encontrar las correctas
-    var preguntas = document.querySelectorAll('form ul li');
-    var respuestas = document.querySelectorAll('form ul input[type="radio"]:checked');
-    var respuestasCorrectas = [];
-
-    for (var i = 0; i < respuestas.length; i++) {
-        if (respuestas[i].value === '5') {
-            respuestasCorrectas.push({
-                pregunta: preguntas[i].textContent.trim(),
-                respuesta: respuestas[i].nextSibling.textContent.trim()
-            });
+    // Array de preguntas y respuestas
+    var preguntasRespuestas = [
+        {
+            pregunta: "¿Qué son las computadoras cuánticas?",
+            respuesta: "Las computadoras cuánticas son un tipo de computadora que utilizan la mecánica cuántica para realizar operaciones en datos."
+        },
+        {
+            pregunta: "¿Cómo ha sido el impacto de la computación cuántica en el sector de privacidad y seguridad?",
+            respuesta: "Los ordenadores cuánticos podrán descifrar los algoritmos criptográficos actuales porque son capaces de factorizar a una velocidad exponencialmente mayor que los ordenadores actuales."
+        },
+        {
+            pregunta: "¿Cómo dijo Gavin Towler que es aplicada la computación cuántica en la química?",
+            respuesta: '"La computación cuántica es particularmente adecuada para el modelado molecular, ya que tiene características únicas que pueden abordar los desafíos probabilísticos de la mecánica cuántica"'
+        },
+        {
+            pregunta: "¿A qué nos ayudaría la computación cuántica en el área de 'Atención médica y productos farmacéuticos'?",
+            respuesta: "A acelerar significativamente los plazos y mejorar la calidad de las diversas etapas de los procesos de investigación y desarrollo farmacéuticos"
         }
-    }
+    ];
 
-    // Añadir las preguntas y respuestas correctas al PDF
-    if (respuestasCorrectas.length > 0) {
-        doc.setTextColor(0, 0, 0);
-        doc.setFontSize(10);
-        doc.text(20, 50, "Respuestas correctas:");
-        var y = 70;
-        respuestasCorrectas.forEach(function (item) {
-            doc.text(20, y, "Pregunta: " + item.pregunta);
-            y += 10;
-            doc.text(20, y, "Respuesta: " + item.respuesta);
-            y += 20;
-        });
-    } else {
-        doc.setTextColor(0, 0, 0);
-        doc.setFontSize(10);
-        doc.text(20, 50, "No hay respuestas correctas.");
-    }
+    // Añadir las preguntas y respuestas al PDF
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(10);
+    doc.text(20, 50, "Respuestas correctas:");
+    var y = 70;
+    preguntasRespuestas.forEach(function (item, index) {
+        doc.text(20, y, "Pregunta " + (index + 1) + ": " + item.pregunta);
+        y += 10;
+        doc.text(20, y, "Respuesta: " + item.respuesta);
+        y += 20;
+    });
 
     // Convertir el documento a una cadena de datos URI que se puede usar en un iframe
     var string = doc.output('datauristring');
@@ -161,6 +161,7 @@
     // Establecer la fuente de datos URI en el iframe
     $('iframe').attr('src', string);
 }
+
 
     </script>
 </body>
