@@ -31,6 +31,28 @@ h2 {
     font-size: 28;
     color:white;
 
+    .navbar_AYu {
+    background-color: black;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_AYu a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_AYu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
 }
 p{
     font-size: 24px;
