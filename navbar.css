@@ -1,43 +1,21 @@
-.navbar {
+.navbar_AYu {
+    background-color: black;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin-top: 5%;
     display: flex;
-    justify-content: space-between; /* Alinea los elementos a los extremos opuestos del contenedor */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 20px; /* Añade algo de espacio alrededor de la barra de navegación */
+    justify-content: center;
 }
 
-.menu-icon {
-    display: none;
-    text-align: right;
-    cursor: pointer;
-}
-
-.logo {
-    /* Para asegurar que el logo ocupe solo el espacio necesario */
-    flex: 0 0 auto; /* No crece ni se encoge, pero no ocupa espacio adicional */
-}
-
-.logo img {
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
-}
-
-.navbar a {
-    color: #fff;
+.navbar_AYu a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    padding: 20px;
 }
 
-.navbar a:hover {
-    background: #3f3f3f;
-}
-
-@media screen and (max-width: 1320px) {
-    .navbar {
-        display: none;
-    }
-    .menu-icon {
-        display: flex;
-    }
+.navbar_AYu a:hover {
+    background-color: #ddd;
+    color: black;
 }
