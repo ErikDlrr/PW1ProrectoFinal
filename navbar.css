@@ -1,33 +1,36 @@
-.navbar{
+.navbar {
     display: flex;
-    
+    justify-content: space-between; /* Alinea los elementos a los extremos opuestos del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 20px; /* Añade algo de espacio alrededor de la barra de navegación */
 }
-
-.navbar.expanded {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 63px;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #171717;
-}
-
-.navbar.expanded a {
-    width: 100%; 
-    text-align: center; 
-    padding: 20px 0;
-}
-
 
 .menu-icon {
     display: none;
     text-align: right;
     cursor: pointer;
+}
+
+.logo {
+    /* Para asegurar que el logo ocupe solo el espacio necesario */
+    flex: 0 0 auto; /* No crece ni se encoge, pero no ocupa espacio adicional */
+}
+
+.logo img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
     padding: 20px;
+}
+
+.navbar a:hover {
+    background: #3f3f3f;
 }
 
 @media screen and (max-width: 1320px) {
@@ -37,26 +40,4 @@
     .menu-icon {
         display: flex;
     }
-}
-
-.logo {
-    text-align:center;
-}
-
-.logo img {
-    max-width: 70%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
-}
-
-.navbar a{
-    display: block;
-    padding: 23px 20px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.navbar a:hover{
-    background: #3f3f3f;
 }
