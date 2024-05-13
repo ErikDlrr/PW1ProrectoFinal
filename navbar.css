@@ -1,0 +1,62 @@
+.navbar{
+    display: flex;
+    
+}
+
+.navbar.expanded {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 63px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #171717;
+}
+
+.navbar.expanded a {
+    width: 100%; 
+    text-align: center; 
+    padding: 20px 0;
+}
+
+
+.menu-icon {
+    display: none;
+    text-align: right;
+    cursor: pointer;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1320px) {
+    .navbar {
+        display: none;
+    }
+    .menu-icon {
+        display: flex;
+    }
+}
+
+.logo {
+    text-align:center;
+}
+
+.logo img {
+    max-width: 70%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.navbar a{
+    display: block;
+    padding: 23px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.navbar a:hover{
+    background: #3f3f3f;
+}
