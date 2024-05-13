@@ -1,0 +1,23 @@
+.navbar_Inter {
+    background-color: white;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin-top: 5%;
+    display: flex;
+     max-width: 50%; 
+    margin: auto;
+    justify-content: center;
+}
+
+.navbar_Inter a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_Inter a:hover {
+    background-color: blue;
+    color: black;
+}
