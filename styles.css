@@ -31,28 +31,28 @@ h2 {
     font-size: 28;
     color:white;
 
-    .navbar_AYu {
-    background-color: black;
+.navbar_Inter {
+    background-color: white;
     overflow: hidden;
     font-family: Arial, sans-serif;
     margin-top: 5%;
     display: flex;
+     max-width: 50%; 
+    margin: auto;
     justify-content: center;
 }
 
-.navbar_AYu a {
+.navbar_Inter a {
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-.navbar_AYu a:hover {
-    background-color: #ddd;
+.navbar_Inter a:hover {
+    background-color: blue;
     color: black;
-}
-
 }
 p{
     font-size: 24px;
